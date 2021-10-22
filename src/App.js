@@ -27,8 +27,7 @@ class App extends Component {
     ];
     return (
       <div>
-        <h2>Let's Start</h2>
-          <Expenses items={expenses}/>
+        <Expenses items={expenses}/>
       </div>
     );
   }
