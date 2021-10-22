@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from "./components/NewExpense/NewExpense";
 
 class App extends Component {
   render() {
@@ -25,8 +26,14 @@ class App extends Component {
         date: new Date(2021, 5, 12),
       },
     ];
+
+    const addExpenseHandler = (expenseData) => {
+      console.log(expenseData)
+      expenses.push(expenseData);
+    }
     return (
       <div>
+        <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses}/>
       </div>
     );

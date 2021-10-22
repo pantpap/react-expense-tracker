@@ -9,7 +9,6 @@ import NewExpense from "../NewExpense/NewExpense";
 const Expenses = (props) =>{
     return (
         <Card className='expenses'>
-            <NewExpense/>
             { props.items.map(item =>{
                 return (
                     <ExpenseItem
