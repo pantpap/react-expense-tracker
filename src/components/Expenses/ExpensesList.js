@@ -4,7 +4,7 @@ import './ExpensesList.css'
 
 const ExpensesList = (props) => {
     if(props.filteredExpenses.length === 0 ){
-        return <p className="expenses-list__fallback">No expenses found</p>
+        return <h2 className="expenses-list__fallback">No expenses found</h2>
     }
     return <ul className="expense-list">
         {props.filteredExpenses.map(item =>{
