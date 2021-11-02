@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 import ExpenseFilter from "./ExpenseFilter";
+import ExpensesList from "./ExpensesList";
 
 
 const Expenses = (props) =>{
@@ -36,7 +37,7 @@ const Expenses = (props) =>{
     return (
         <Card className='expenses'>
             <ExpenseFilter selectedYear={selectedYear} onChangeFilter={onChangeFilter}/>
-            {displayExpensesContent()}
+            <ExpensesList filteredExpenses={filteredExpenses}/>
         </Card>
     )
 }
